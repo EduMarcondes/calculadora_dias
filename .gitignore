@@ -53,10 +53,3 @@ frontend/.vite/
 .DS_Store
 Thumbs.db
 .idea/
-
-# Workspace/project metadata not required at runtime
-.github/
-docs/
-.prompts/
-.vscode/
-AGENTS.md
