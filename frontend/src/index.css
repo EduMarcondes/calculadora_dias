@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 30% 96%;
+    --foreground: 205 28% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 205 28% 14%;
+    --primary: 190 92% 34%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 33% 90%;
+    --secondary-foreground: 205 28% 18%;
+    --muted: 30 24% 92%;
+    --muted-foreground: 205 14% 35%;
+    --accent: 188 52% 90%;
+    --accent-foreground: 205 28% 18%;
+    --destructive: 2 81% 53%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 82%;
+    --input: 30 20% 82%;
+    --ring: 190 92% 34%;
+  }
+
+  .dark {
+    --background: 211 40% 10%;
+    --foreground: 35 36% 94%;
+    --card: 213 34% 14%;
+    --card-foreground: 35 36% 94%;
+    --primary: 186 86% 45%;
+    --primary-foreground: 212 35% 12%;
+    --secondary: 213 26% 19%;
+    --secondary-foreground: 35 36% 94%;
+    --muted: 214 21% 20%;
+    --muted-foreground: 209 12% 72%;
+    --accent: 187 37% 24%;
+    --accent-foreground: 35 36% 94%;
+    --destructive: 7 80% 59%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 20% 30%;
+    --input: 214 20% 30%;
+    --ring: 186 86% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Space Grotesk", sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      radial-gradient(circle at 20% 20%, hsl(var(--accent) / 0.24), transparent 48%),
+      radial-gradient(circle at 80% 0%, hsl(var(--primary) / 0.16), transparent 42%),
+      linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--muted)));
+  }
+
+  .fade-up {
+    animation: fadeUp 420ms ease-out both;
+  }
+
+  .delay-1 {
+    animation-delay: 120ms;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

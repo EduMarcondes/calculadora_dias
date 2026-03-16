@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+**/dist/
+**/build/
+**/coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+!.env.example
+!**/.env.example
+
+# Prisma / SQLite local artifacts
+backend/dev.db
+backend/dev.db-journal
+backend/dev.db-shm
+backend/dev.db-wal
+backend/prisma/*.db
+backend/prisma/*.db-journal
+backend/prisma/*.db-shm
+backend/prisma/*.db-wal
+
+# Vite / frontend artifacts
+frontend/dist/
+frontend/.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+
+# Workspace/project metadata not required at runtime
+.github/
+docs/
+.prompts/
+.vscode/
+AGENTS.md
